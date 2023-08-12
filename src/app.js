@@ -1,16 +1,31 @@
 // Using javascript, create a function that generates and returns a random excuse with the following structure:
-let who = ['El perro','Mi abuela','Mi tortuga','Mi primo', 'Mi gato'];
-let what = ['se comió','aplastó','robó','rompió', 'ensució', 'orino'];
-let when = ['antes de clases','justo cuando terminé','mientras almorzaba','mientras cocinaba', 'cuando fui al gimnasio'];
+let who = ["The dog", "My grandma", "His turtle", "My bird"];
+let what = ["ate", "peed", "crushed", "broke"];
+let when = [
+  "before the class",
+  "right on time",
+  "when I finished",
+  "during my lunch",
+  "while I was praying"
+];
+let action = ["my homework", "the keys", "the car"];
 
-function excuseGenerator(quien, que, cuando){
-    numQuien = Math.floor(Math.random() * quien.length);
-    numQue = Math.floor(Math.random() * que.length);
-    numCuando = Math.floor(Math.random() * cuando.length);
-    return quien[numQuien] + " " + que[numQue] + " " + "mi tarea" + " " + cuando[numCuando];
+function excuseGenerator(quien, que, cuando) {
+  let positionQuien = Math.floor(Math.random() * who.length);
+  let positionQue = Math.floor(Math.random() * what.length);
+  let positionCuando = Math.floor(Math.random() * when.length);
+  return (
+    quien[positionQuien] +
+    " " +
+    que[positionQue] +
+    " " +
+    "my homework" +
+    " " +
+    cuando[positionCuando]
+  );
 }
-function onLoad(){
-    var excusa = document.getElementById('excuse');
-    excusa.innerHTML = excuseGenerator(who, what, when);
+function onLoad() {
+  var excusa = document.getElementById("excuse");
+  excusa.innerHTML = excuseGenerator(who, what, when);
 }
 window.onload = onLoad;
