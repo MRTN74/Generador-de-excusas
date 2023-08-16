@@ -11,12 +11,15 @@ let when = [
   "during my lunch",
   "while I was praying"
 ];
+function treaerIndexAleatorio(arreglo) {
+  return Math.floor(Math.random() * arreglo.length);
+}
 
 function excuseGenerator(quien, que, cuando, accion) {
-  let positionQuien = Math.floor(Math.random() * who.length);
-  let positionQue = Math.floor(Math.random() * what.length);
-  let positionCuando = Math.floor(Math.random() * when.length);
-  let positionAccion = Math.floor(Math.random() * action.length);
+  let positionQuien = treaerIndexAleatorio(who);
+  let positionQue = treaerIndexAleatorio(what);
+  let positionCuando = treaerIndexAleatorio(when);
+  let positionAccion = treaerIndexAleatorio(action);
   return (
     quien[positionQuien] +
     " " +
