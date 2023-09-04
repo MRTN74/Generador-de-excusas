@@ -4,16 +4,10 @@ import "./style.css";
 let who = ["The dog", "My grandma", "His turtle", "My bird"];
 let what = ["ate", "peed", "crushed", "broke"];
 let action = ["my homework", "the keys", "the car"];
-let when = [
-  "before the class",
-  "right on time",
-  "when I finished",
-  "during my lunch",
-  "while I was praying"
-];
-function treaerIndexAleatorio(arreglo) {
-  return Math.floor(Math.random() * arreglo.length);
-}
+let when = ["before the class","right on time","when I finished","during my lunch","while I was praying"];
+
+let treaerIndexAleatorio = arreglo => Math.floor(Math.random() * arreglo.length);
+
 
 function excuseGenerator(quien, que, cuando, accion) {
   let positionQuien = treaerIndexAleatorio(who);
